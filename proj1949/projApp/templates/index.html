@@ -1,0 +1,84 @@
+{% extends 'base.html' %}  {% load static %}
+{% block content%}
+
+  
+
+    <div class="first-box">
+
+      <div class="sub-box">
+            <img src="{% static 'images/grpone.jpg' %}" width="100%" height="100%" alt="1949 FC Logo"/>
+      </div>
+
+      <div class="sub-box">
+        <section>
+            <h2>OUR VALUES</h2>
+    <br>
+    <center>
+    <p>
+      At 1949 FC, we are a soccer team that values diversity and inclusion. We
+      strive to create an environment that celebrates individuals from all
+      backgrounds and fosters a sense of belonging. Our team is committed to
+      promoting community development through sports and creating positive
+      social impact.
+    </p>
+    <br>
+    <br>
+    <p>
+      Whether you are a player, supporter, or part of our community, we welcome
+      you to join us on this exciting journey of soccer and community building.
+    </p>
+    </center>
+    </section>
+      </div>
+
+      <div class="sub-box"> 
+        <img src="{% static 'images/phot1.jpg' %}" width="100%" height="100%" alt="1949 FC Logo"/>
+      </div>
+
+    </div>
+    
+    <!-- Other content within the main tag -->
+    <div class="second-box">
+
+    <div class="sub-box">
+                  <img src="{% static 'images/phot1.jpg' %}" width="100%" height="100%" alt="1949 FC Logo"/>
+    </div>
+
+    <div class="sub-box">
+                  <img src="{% static 'images/phot2.jpg' %}" width="100%" height="100%" alt="1949 FC Logo"/>
+    </div>
+    <div class="sub-box">
+                  <img src="{% static 'images/phot3.jpg' %}" width="100%" height="100%" alt="1949 FC Logo"/>
+    </div>
+    <div class="sub-box">
+      
+                  <section>
+    <h2>Latest News</h2>
+    <br>
+    <article>
+      <h3>Upcoming Games</h3>
+      <br>
+      <p>
+        Get ready for our upcoming matches! Check out our <a href="{% url 'Schedules' %}" target = "_blank"> schedule</a> for the 
+        season and mark your calendars. We are excited to showcase our skills
+        and compete against other talented teams in the league.
+      </p>
+    </article>
+    </section>
+    </div>
+  </div>
+
+
+
+  <div class="third-box">
+    <div class="sub-box"></div>
+    <div class="sub-box"></div>
+  </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

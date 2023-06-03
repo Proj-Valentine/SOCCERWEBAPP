@@ -1,0 +1,24 @@
+{% load static %}
+<header>
+
+    <div class= "headerbox">
+      <nav class="navbox">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'profilepage' %}">TeamProfile</a>
+        <a href="{% url 'Schedules' %}">Matches</a>
+        <a href="{% url 'Contacts' %}">Contacts</a>
+      </nav>
+    </div>
+
+    <div class="barner">
+      <img
+        src="{% static 'images/banner.jpg' %}"
+        width="100%"
+        height="400px"
+        align="left"
+        alt="1949 FC Logo"
+      />
+      <div class="barner-text"> 1949 FOOTBALL CLUB  </div>
+    </div>
+
+</header>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1949 FC</title>
+        {% load static %}
+    <link rel = 'stylesheet' href="{% static 'projApp\style2.css' %}">
+</head>
+<body>
+    <center> 
+         {% include 'partials/header.html' %}
+        <div class="mainbox">
+
+       
+
+        <main>
+            {% block content%}
+            {% endblock%}
+        </main>
+
+        {% include 'partials/footer.html' %}
+    </div>
+</center>
+</body>
+</html>
