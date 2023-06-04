@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-t0$e!d^bfn(33wpvve@+r0ojmyn=0)5n=9a7wy!&g62(w@%(95
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['1949-intermediateteam.com']
 
 
 # Application definition
@@ -75,16 +75,16 @@ WSGI_APPLICATION = 'proj1949.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {   
-#     'default': {   
-#         'ENGINE': 'django.db.backends.postgresql',   
-#         'NAME': 'football',   
-#         'USER': 'vampah',   
-#         'PASSWORD': 'Val32roseamp',   
-#         'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
-#         'PORT': '5432',     
-#     }   
-# } 
+DATABASES = {   
+    'default': {   
+        'ENGINE': 'django.db.backends.postgresql',   
+        'NAME': 'football',   
+        'USER': 'vampah',   
+        'PASSWORD': 'Val32roseamp',   
+        'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
+        'PORT': '5432',     
+    }   
+} 
 
 
 
@@ -136,31 +136,31 @@ BROWSER = 'C:/Program Files/Google/Chrome/Application/chrome.exe'
 
 
 # Staging-specific settings
-if os.getenv('MYAPP_ENV') == 'staging':
-    ALLOWED_HOSTS = ['1949.staging.com']
-    DATABASES = {   
-    'default': {   
-        'ENGINE': 'django.db.backends.postgresql',   
-        'NAME': 'footballstaging',   
-        'USER': 'vampah',   
-        'PASSWORD': 'Val32roseamp',   
-        'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
-        'PORT': '5432',     
-    }   
-} 
-    # Other staging-specific settings...
+# if os.getenv('MYAPP_ENV') == 'staging':
+#     ALLOWED_HOSTS = ['1949.staging.com']
+#     DATABASES = {   
+#     'default': {   
+#         'ENGINE': 'django.db.backends.postgresql',   
+#         'NAME': 'footballstaging',   
+#         'USER': 'vampah',   
+#         'PASSWORD': 'Val32roseamp',   
+#         'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
+#         'PORT': '5432',     
+#     }   
+# } 
+#     # Other staging-specific settings...
 
-# Production-specific settings
-if os.getenv('MYAPP_ENV') == 'production':
-    ALLOWED_HOSTS = ['1949.intermediateteam.com']
-    DATABASES = {   
-    'default': {   
-        'ENGINE': 'django.db.backends.postgresql',   
-        'NAME': 'football',   
-        'USER': 'vampah',   
-        'PASSWORD': 'Val32roseamp',   
-        'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
-        'PORT': '5432',     
-    }   
-} 
-    # Other production-specific settings...
+# # Production-specific settings
+# if os.getenv('MYAPP_ENV') == 'production':
+#     ALLOWED_HOSTS = ['1949.intermediateteam.com']
+#     DATABASES = {   
+#     'default': {   
+#         'ENGINE': 'django.db.backends.postgresql',   
+#         'NAME': 'football',   
+#         'USER': 'vampah',   
+#         'PASSWORD': 'Val32roseamp',   
+#         'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
+#         'PORT': '5432',     
+#     }   
+# } 
+#     # Other production-specific settings...
