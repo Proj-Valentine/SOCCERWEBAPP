@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,16 +75,16 @@ WSGI_APPLICATION = 'proj1949.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {   
-    'default': {   
-        'ENGINE': 'django.db.backends.postgresql',   
-        'NAME': 'football',   
-        'USER': 'vampah',   
-        'PASSWORD': 'Val32roseamp',   
-        'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
-        'PORT': '5432',     
-    }   
-} 
+# DATABASES = {   
+#     'default': {   
+#         'ENGINE': 'django.db.backends.postgresql',   
+#         'NAME': 'football',   
+#         'USER': 'vampah',   
+#         'PASSWORD': 'Val32roseamp',   
+#         'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
+#         'PORT': '5432',     
+#     }   
+# } 
 
 
 
@@ -129,3 +130,37 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 BROWSER = 'C:/Program Files/Google/Chrome/Application/chrome.exe'
+
+#### adding configuration for staging and production
+
+
+
+# Staging-specific settings
+if os.getenv('MYAPP_ENV') == 'staging':
+    ALLOWED_HOSTS = ['1949.staging.com']
+    DATABASES = {   
+    'default': {   
+        'ENGINE': 'django.db.backends.postgresql',   
+        'NAME': 'footballstaging',   
+        'USER': 'vampah',   
+        'PASSWORD': 'Val32roseamp',   
+        'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
+        'PORT': '5432',     
+    }   
+} 
+    # Other staging-specific settings...
+
+# Production-specific settings
+if os.getenv('MYAPP_ENV') == 'production':
+    ALLOWED_HOSTS = ['1949.intermediateteam.com']
+    DATABASES = {   
+    'default': {   
+        'ENGINE': 'django.db.backends.postgresql',   
+        'NAME': 'football',   
+        'USER': 'vampah',   
+        'PASSWORD': 'Val32roseamp',   
+        'HOST': 'valadbtutorial.cyilvjfcctn7.ca-central-1.rds.amazonaws.com',   
+        'PORT': '5432',     
+    }   
+} 
+    # Other production-specific settings...

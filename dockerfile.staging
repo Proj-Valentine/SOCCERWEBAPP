@@ -1,0 +1,20 @@
+# Use a base image suitable for your application
+FROM python:3.10-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application code into the container
+COPY . /app
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Expose the port on which your application runs
+EXPOSE 80
+
+# Set the environment variable for Django settings
+ENV DJANGO_SETTINGS_MODULE=proj1949.settings
+
+# Start the application
+CMD python manage.py runserver 0.0.0.0:80
