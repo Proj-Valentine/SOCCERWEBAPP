@@ -125,7 +125,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 #specify static root folder in EC2
-STATIC_ROOT = '/home/ec2-user/SOCCERWEBAPP/SOCCERPROJECT/proj1949/projApp/static/'
+STATIC_ROOT = '/home/ec2-user/SOCCERWEBAPP/proj1949/projApp/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
