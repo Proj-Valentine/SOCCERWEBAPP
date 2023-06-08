@@ -1,57 +1,267 @@
-*{
-    margin:0px;
+* {
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 body {
-    background-color: lightgrey;
-    color: #333333 ;
-    /* or the desired background color */
-}
-
-/*create boxes for div tags to control info display on page*/
-.Mainbox {
-    width: 1000px;
     background-color: white;
-    border: 1px solid red;
-    padding: 10px;
-    text-align: left;
-    color: #333333
+    background-image: linear-gradient(90deg, rgb(31, 223, 31), rgb(72, 68, 68));
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+
 }
 
-.headertext{
-    /*background-color: rgb(7, 77, 7);*/
-    /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(7, 77, 7, 0.5));*/
-    width: 980px;
-    color: white; 
-    margin: 0;
-    background-color: #1A1A1A;
-    color: #FFFFFF;
+
+.mainbox {
+    width: 1200px;
     padding: 20px;
+    background-image: linear-gradient(90deg, rgb(31, 223, 31), rgb(72, 68, 68));
+    /* border-radius: 20px; 
+    box-shadow: 10px 10px 20px #c4c4c4, -10px -10px 20px #ffffff;*/
+    text-align: left;
+    /* Adjust the value based on the height of your footer */
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.headerbox {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to bottom, black, green);
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    color: aliceblue;
+    padding: 15px;
+
+}
+
+.headerbox a {
+    color: white;
+    /* Change the link color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.headerbox a:hover {
+    /* Add hover styles if desired */
+}
+
+/* .barner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+} */
+
+.barner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: slideshow 10s infinite;
+}
+
+@keyframes slideshow {
+    0% {
+        background-image: url("images/phot1.jpg");
+        width: 100%;
+        height: 400px;
+    }
+
+    25% {
+        background-image: url("images/banner.jpg");
+        width: 100%;
+        height: 400px;
+    }
+
+    50% {
+        background-image: url("images/phot2.jpg");
+        width: 100%;
+        height: 400px;
+    }
+
+    75% {
+        background-image: url("images/phot3.jpg");
+        width: 100%;
+        height: 400px;
+    }
+
+    100% {
+        background-image: url("images/banner.jpg");
+        width: 100%;
+        height: 400px;
+    }
+}
+
+
+
+.barner-text {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 50px;
+    background: linear-gradient(to bottom, black, green);
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+
+    /*adding glassmorphisom effects to the barner text*/
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+
+}
+
+
+.main {
+    padding-top: 10px;
+}
+
+.first-box {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+.sub-box {
+    width: calc(33.33% - 10px);
+    /* Adjusted for spacing */
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #c4c4c4, -10px -10px 20px #94bbe9;
+    /* background-color: #f9f9f9;*/
+}
+
+
+.second-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.sub-box {
+    width: calc(25% - 10px);
+    /* Adjusted for spacing */
+    height: 300px;
+    background-color: green;
+}
+
+.sub-box:nth-child(1) {
+    background-color: grey;
+}
+
+.sub-box:nth-child(2) {
+    background-color: green;
+}
+
+.sub-box:nth-child(3) {
+    background-color: green;
+}
+
+.sub-box:nth-child(4) {
+    background-color: green;
+}
+
+
+.third-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+.sub-box {
+    flex-grow: 1;
+    /* Make the sub-boxes grow to fill the available space */
+    padding: 10px;
+    margin: 10px;
+    /* Other styles for the sub-box */
+}
+
+
+/*Footer styles*/
+
+.footerbox {
+    width: 100%;
+    background-image: linear-gradient(90deg, rgb(31, 223, 31), rgb(72, 68, 68));
+}
+
+.footerbox p {
+    color: black;
+}
+
+.footerright,
+.footermiddle,
+.footerleft {
+    width: calc(33.33% - 20px);
+    text-align: center;
+    float: left;
+    border: solid black;
+    padding: 10px;
+    background-color: green;
+    margin: 10px;
+}
+
+
+
+/*glassmorphism*/
+
+h2,
+h3 {
+    font-style: italic;
     text-align: center;
 }
 
-.headertext h1 {
-    margin: 0;
-    font-size: 48px;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-
-h1,h2,h3{
-    font-family: Arial;
-    color:black ;
-    font-weight: bold;
-}
 p {
-    font-family: sans-serif;
-    font-size: 13px;
-    color: #333333;
-    font-weight: bold;
+    color: white;
 }
 
-/*links*/
+.neumorphism {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background: rgb(241, 241, 242);
+    box-shadow: 12px 12px 24px #262626, -12px -12px 24px #ffffff;
+    -webkit-box-shadow: 12px 12px 24px #262626, -12px -12px 24px #ffffff;
+    min-width: 250px;
+    min-height: 250px;
+}
+
+
+/*css for the profile page*/
+/* .main-box {
+    width: 1000px;
+padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #c4c4c4, -10px -10px 20px #ffffff;
+
+} */
+
+
+/*ghjkl*/
+/***************************************************************************************************/
+
 
 .navbox {
     width: 980px;
@@ -83,58 +293,3 @@ nav a:hover {
     text-decoration: none;
 }
 
-/*create boxes for div tags to control info display on page*/
-/* .Mainbox {
-    width: 1000px;
-    border:1px solid red;
-    padding: 10px;
-    text-align: left;
-} */
-
-
-.footerright{
-    width: 489px;
-    text-align: right;
-    float:right;
-    border: 1px solid black;
-    padding: 10px;
-}
-.footerleft {
-    width: 489px;
-    text-align: left;
-    float: left;
-    border: 1px solid black;
-    padding: 10px;
-}
-
-.footermain
-
-/* header {
-    background-image: url("images/home1949.jpg");
-    background-size: cover;
-    background-position: center;
-} */
-
-
-.glassmorphism-container {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 20px;
-    width: 100px;
-}
-
-.glassmorphism-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-
-.neumorphism {
-    borderRadius: 50px;
-    webkitBorderRadius: 50px;
-    background: rgb(241, 241, 242);
-    boxShadow: 12px 12px 24px #262626, -12px -12px 24px #ffffff WebkitBoxShadow: 12px 12px 24px #262626, -12px -12px 24px #ffffff minWidth: 250px;
-    minHeight: 250px;
-}

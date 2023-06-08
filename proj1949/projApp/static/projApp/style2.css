@@ -244,16 +244,68 @@ p{color: white;}
 }
 
 
-/*css for the profile page*/
-/* .main-box {
-    width: 1000px;
-padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px #c4c4c4, -10px -10px 20px #ffffff;
+/************************************************/
+/* Media queries for different screen sizes */
 
-} */
+@media (max-width: 767px) {
 
+    /* Styles for mobile phones */
+    .mainbox {
+        max-width: 100%;
+    }
 
-/*ghjkl*/
+    .barner-text {
+        width: 90%;
+    }
+
+    .first-box,
+    .second-box,
+    .third-box {
+        flex-wrap: wrap;
+    }
+
+    .sub-box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Styles for tablets */
+    .mainbox {
+        max-width: 100%;
+    }
+
+    .barner-text {
+        width: 70%;
+    }
+
+    .first-box,
+    .second-box,
+    .third-box {
+        flex-wrap: wrap;
+    }
+
+    .sub-box {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* Styles for laptops */
+    .mainbox {
+        max-width: 1200px;
+    }
+
+    .first-box,
+    .second-box,
+    .third-box {
+        flex-wrap: nowrap;
+    }
+
+    .sub-box {
+        width: calc(33.33% - 10px);
+    }
+}
 
