@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import decouple
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,6 +86,17 @@ DATABASES = {
         'PORT': '5432',     
     }   
 } 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': decouple.config('DB_NAME'),
+        'USER': decouple.config('DB_USER'),
+        'PASSWORD': decouple.config('DB_PASSWORD'),
+        'HOST': decouple.config('DB_HOST'),
+        'PORT': decouple.config('DB_PORT'),
+    }
+}
 
 
 
